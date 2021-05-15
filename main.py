@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 
 class Scraper:
     def __init__(self, site):
-        self.site = StopIteration
+        self.site = site
 
     def scrape(self):
         r = urllib.request.urlopen(self.site)
@@ -15,6 +15,8 @@ class Scraper:
             if url is None:
                 continue
             if "html" in url:
+                print("\n" + url)
+            else:
                 print("\n" + url)
 
 news = "https://news.google.com/"
